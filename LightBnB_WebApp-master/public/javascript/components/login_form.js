@@ -22,8 +22,9 @@ $(() => {
 
   $logInForm.on('submit', function(event) {
     event.preventDefault();
-
+    console.log({$this})
     const data = $(this).serialize();
+    console.log(data)
     logIn(data)
       .then(json => {
         console.log(json);

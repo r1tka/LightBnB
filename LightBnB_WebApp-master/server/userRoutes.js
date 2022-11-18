@@ -27,6 +27,7 @@ module.exports = function(router, database) {
     return database.getUserWithEmail(email)
     .then(user => {
       if (bcrypt.compareSync(password, user.password)) {
+        console.log('pasword was succesfu')
         return user;
       }
       return null;
